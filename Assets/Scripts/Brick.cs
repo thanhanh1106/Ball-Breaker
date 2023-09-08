@@ -23,6 +23,7 @@ public class Brick : MonoBehaviour
             if(GameManager.Ins.levelObject != null && GameManager.Ins.levelObject.bricks != null)
             {
                 GameManager.Ins.levelObject.bricks.Remove(this);
+                Debug.Log(GameManager.Ins.levelObject.bricks.Count);
                 if(GameManager.Ins.levelObject.bricks.Count <= 0)
                 {
                     Prefs.SetLevelPassed(LevelManager.Ins.CurrentLevel, true);
